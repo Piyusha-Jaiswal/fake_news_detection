@@ -1,0 +1,151 @@
+body{
+	font:15px/1.5 Arial, Helvetica,sans-serif;
+	padding: 0;
+	background-color: #e9e9e9cf;
+}
+
+.container{
+	text-align:center;
+	margin: 10px;
+	width:100%;
+	margin: auto;
+	overflow: hidden;
+}
+.random-link {
+    border: none;
+	color:  rgb(214, 92, 22);
+	font-size: 18px;
+	font-style: italic;
+    font-weight: bold;
+	font-family: 'Monaco';
+	text-decoration-line: underline ;
+    cursor: pointer;
+}
+.random-link:hover {
+	color: rgb(219, 125, 71);
+}
+
+.newsbox{
+	display: flex;
+	flex-direction:column;
+	text-align:center;
+	margin: 10px;
+	width:100%;
+	margin: auto;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+
+header{
+	background: #4775b1;
+	border-bottom: #000000 3px solid;
+	height:100px;
+	width:100%;
+    padding-top:30px;
+    padding-bottom: 30px;
+}
+
+.main-header{
+			text-align:center;
+			background-color: #4775b1;
+			height:60px;
+			width:100%;
+			margin:0;
+		}
+
+
+.brandname{
+	text-align:center;
+    font-size:30px;
+	color: hsl(0, 2%, 8%);
+    margin: 10px;
+}
+
+
+header h2{
+	text-align:center;
+	color:#fff;
+}
+
+.results{
+	border-radius: 15px 50px;
+    background: #4775b1;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+
+.predict-button {
+	background-color:#4775b1;
+	color:  white;
+	font-size: 18px;
+	font-family: 'Monaco';
+	padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.predict-button:hover {
+	background-color:#5691dd;
+	color: white;
+}
+
+.loader {
+	border: 10px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #4775b1;
+	width: 60px;
+	height: 60px;
+	-webkit-animation: spin 2s linear infinite; /* Safari */
+	animation: spin 2s linear infinite;
+	position: absolute;
+	left: 48%;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+0% { -webkit-transform: rotate(0deg); }
+100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+#wrapper {
+	max-width: 200px;
+	/* overflow: auto;
+	display: flex; */
+	position: absolute;
+	left: 50%;
+}
+
+#article-title {
+	border-radius: 10px;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+    outline: none;
+}
+
+#article-author {
+	border-radius: 10px;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+    outline: none;
+}
+
+#article-text {
+	border-radius: 20px;
+	padding: 20px;
+    outline: none;
+}
+
+#result-banner {
+	font-family: 'Monaco';
+	font-weight: 'bold';
+}

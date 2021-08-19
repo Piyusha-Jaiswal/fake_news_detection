@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Fake News Detector</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="../static/js/predict.js" type="text/javascript"></script>
+    <script src="../static/js/home.js" type="text/javascript"></script>
+    
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+            <div id="brandname">
+                <h1 style="font-family: 'Monaco'; color: white;">is news fake or real!!</h1>
+            </div>
+        </div>
+    </header>
+    <br/>
+    <div class="container">
+        <span style="color: black; padding-top: 40px;">Enter your text or <button type="button" class="random-link" value="random" id="random-text">click here to generate a random one from our dataset</button></span>
+    </div>
+	<div class="container" style="padding-top: 15px;">
+        <div class="newsbox" style="padding-top: 30px;">
+            <div>
+                <label>
+                    <textarea placeholder="Article Title(optional)" name="text" id="article-title" rows="1" cols="100" ></textarea>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <textarea placeholder="Article Author(optional)" name="text" id="article-author" rows="1" cols="100"></textarea>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <textarea placeholder="Article Text" name="text" id="article-text" rows="8" cols="100" required></textarea>
+                </label>
+            </div>
+        </div>
+        <div id="container">
+            <button type="button" class="predict-button" value="predict" id="predict-button-id">Predict</button>
+        </div>​
+        <div id="container">
+            <div class="loader" id="loader-id" style="display: none;"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2 id="result-banner"></h2>
+    </div>
+</body>
+
+<script>
+    var predict_btn= document.getElementById("predict-button-id");
+    var random_data=document.getElementById("random-text");
+    predict_btn.addEventListener("click", predictnews);
+    random_data.addEventListener("click", getdata);
+</script>
+
+</html>
